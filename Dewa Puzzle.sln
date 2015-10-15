@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dewa Puzzle.CSharp", "Dewa Puzzle.CSharp.csproj", "{7FF9860E-CF87-467A-F3C4-22D9546E4632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dewa Puzzle.CSharp.Editor", "Dewa Puzzle.CSharp.Editor.csproj", "{8C11674F-0471-E8F1-E54E-602A0B0F8D72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FF9860E-CF87-467A-F3C4-22D9546E4632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF9860E-CF87-467A-F3C4-22D9546E4632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF9860E-CF87-467A-F3C4-22D9546E4632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF9860E-CF87-467A-F3C4-22D9546E4632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C11674F-0471-E8F1-E54E-602A0B0F8D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C11674F-0471-E8F1-E54E-602A0B0F8D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C11674F-0471-E8F1-E54E-602A0B0F8D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C11674F-0471-E8F1-E54E-602A0B0F8D72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
