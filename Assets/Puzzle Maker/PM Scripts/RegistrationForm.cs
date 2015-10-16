@@ -20,10 +20,10 @@ public class RegistrationForm : MonoBehaviour
             return;
         }
 
-        GUI.DrawTexture(new Rect(500, 100, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+        GUI.DrawTexture(new Rect(200, 100, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
 
         // Wrap everything in the designated GUI Area
-        GUILayout.BeginArea(new Rect(575, 250, 200, 400));
+        GUILayout.BeginArea(new Rect(275, 250, 200, 400));
 
         // Begin the singular Vertical Group
         GUILayout.BeginVertical();

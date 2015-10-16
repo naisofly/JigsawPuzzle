@@ -16,7 +16,7 @@ Loading C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Manag
 Platform assembly: C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.139 seconds
+- Completed reload, in  0.158 seconds
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
@@ -24,16 +24,16 @@ desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2f60 -> priority: 1 
-875976t095786
+  Thread -> id: 12ec -> priority: 1 
++971551234567
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.760662 ms
+UnloadTime: 0.514345 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 205.
-Total: 2.761991 ms (FindLiveObjects: 0.030000 ms CreateObjectMapping: 0.021710 ms MarkObjects: 2.676333 ms  DeleteObjects: 0.032368 ms)
+Total: 0.403028 ms (FindLiveObjects: 0.030000 ms CreateObjectMapping: 0.029605 ms MarkObjects: 0.320528 ms  DeleteObjects: 0.020921 ms)
 
 False
  
