@@ -5,7 +5,7 @@ using System.Threading;
 
 public class Timer : MonoBehaviour
 {
-    public TimeSpan timeLimit = new TimeSpan(0, 3, 0);
+    public TimeSpan timeLimit = new TimeSpan(0, 1, 0);
     protected Boolean timeOut = false;
 
     protected Stopwatch timer = new Stopwatch();
@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
         {
             timer.Reset();
             timeOut = true; //OUT OF TIME - LOSE SCREEN
+            Application.LoadLevel(3);
         }
     }
 

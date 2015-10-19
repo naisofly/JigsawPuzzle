@@ -495,6 +495,7 @@ public class JPPieceController : MonoBehaviour {
     void OnPuzzleComplete()
     {
         Debug.Log("Puzzle successfully complete");
+        Application.LoadLevel(2);
     }
 
 }

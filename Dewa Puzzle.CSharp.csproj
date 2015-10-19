@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Assets\Puzzle Maker\PM Scripts\JPPieceController.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\JPPuzzleController.cs" />
+    <Compile Include="Assets\Puzzle Maker\PM Scripts\Lose.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\MPPieceController.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\MPPuzzleController.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\PPPiecePositionDetection.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Puzzle Maker\PM Scripts\SPieceInfo.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\SPieceMetaData.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\Timer.cs" />
+    <Compile Include="Assets\Puzzle Maker\PM Scripts\Win.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Puzzle Maker\PM Free Images\ReadMe.txt" />
