@@ -5,7 +5,7 @@ using System.IO;
 
 public class Difficulty : MonoBehaviour
 {
-    public Texture logo;
+    public Texture logo, mascot_noor, mascot_hayat;
 
     void OnGUI()
     {
@@ -14,30 +14,35 @@ public class Difficulty : MonoBehaviour
         //logo
         GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
 
-        GUILayout.BeginArea(new Rect(Screen.width / 2 - 100, 175, 400, 800));
+       // GUILayout.BeginArea(new Rect(Screen.width / 2 - 175, 175, 400, 800));
+
+        GUILayout.BeginArea(new Rect(Screen.width / 2 - 500, 200, 1000, 800));
+
+        GUILayout.BeginHorizontal();
+
+        //noor mascot
+        GUI.DrawTexture(new Rect(0, 0, 270, 380), mascot_noor, ScaleMode.StretchToFill, true, 10.0F);
+
         GUILayout.BeginVertical();
+        GUI.Label(new Rect(350, 20, 300, 100),"Pick a Difficulty Level");
 
-        GUI.Label(new Rect(10, 0, 200, 100),"Pick a Difficulty Level");
-
-        if(GUI.Button(new Rect(10, 50, 200, 100), "EASY"))
+        if (GUI.Button(new Rect(350, Screen.height/2 - 300, 300, 100), "KIDS"))
         {
-            Application.LoadLevel("Easy"); //load Easy scene
+            Application.LoadLevel(2); //load Easy scene
         }
 
-        if( GUI.Button(new Rect(10, 200, 200, 100), "HARD"))
+        if( GUI.Button(new Rect(350, Screen.height / 2 -100, 300, 100), "ADULTS"))
         {
-            Application.LoadLevel("Hard"); //load Hard scene
+            Application.LoadLevel(3); //load Hard scene
         }
-
         GUILayout.EndVertical();
-        GUILayout.EndArea();
-    }
 
-    void Update()
-    {   
-        //load form screen on any mouse click
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
-            Application.LoadLevel(0);
+        //hayat mascot
+        GUI.DrawTexture(new Rect(730, 0, 270, 380), mascot_hayat, ScaleMode.StretchToFill, true, 10.0F);
+
+        GUILayout.EndHorizontal();
+
+        GUILayout.EndArea();
     }
 
 }

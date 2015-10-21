@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using PuzzleMaker;
+using System.IO;
 
-public class JPPuzzleController : MonoBehaviour {
+public class JPPuzzleController : MonoBehaviour
+{
 
     public Texture2D PuzzleImage;
     [HideInInspector]
@@ -14,7 +16,7 @@ public class JPPuzzleController : MonoBehaviour {
 
 
     public Texture2D[] JointMaskImage;
-    
+
     public bool DisplayCompletedImage = true;
 
     [Range(3, 10)]
@@ -56,14 +58,21 @@ public class JPPuzzleController : MonoBehaviour {
         get { return ((float)PuzzleImage.height / (float)PuzzleImage.width); }
     }
 
+    // Get path for game data
+    private static string getPath()
+    {
+        return Application.dataPath;
+    }
 
-
-	void Start () {
-
-        Screen.SetResolution(768, 1024, true);
+    void Start()
+    {
 
         if (!UseFilePath)
         {
+            //random image selection
+            PuzzleImage = new Texture2D(1, 1);
+            PuzzleImage.LoadImage(File.ReadAllBytes(getPath() + "/Puzzle Maker/PM Free Images/dewa/" + Random.Range(1, 11) + ".jpg"));
+
             _PuzzleMaker = new PuzzlePieceMaker(PuzzleImage, JointMaskImage, PiecesInRow, PiecesInCol);
 
             //Enable below code and provide a file path to save data created by _puzzlemaker class using provided image
@@ -84,7 +93,7 @@ public class JPPuzzleController : MonoBehaviour {
                 Destroy(gameObject);
                 return;
             }
-            
+
         }
 
 
@@ -113,11 +122,11 @@ public class JPPuzzleController : MonoBehaviour {
         transform.localScale = new Vector3((float)PiecesInRow, (PiecesInCol * ((float)PuzzleImage.height / (float)PuzzleImage.width)), 1f);
 
         //Translate to zero
-        transform.position = new Vector3(0,0,0);
+        transform.position = new Vector3(0, 0, 0);
         transform.rotation = Quaternion.Euler(Vector3.zero);
 
 
-#region "Pieces Initialization And Placement"
+        #region "Pieces Initialization And Placement"
 
         //Initialize all pieces resize them and place them on screen randomly
         _PuzzlePieces = new GameObject[PiecesInRow * PiecesInCol];
@@ -154,12 +163,12 @@ public class JPPuzzleController : MonoBehaviour {
                 //Resize piece in world
                 Temp.transform.localScale = new Vector3(PieceScaleX, PieceScaleY, 1);
 
-                
+
                 //Position pieces randomly on screen
                 Vector3 CalcPosition = Camera.main.ScreenToWorldPoint(
                     new Vector3(Random.Range(_PuzzleMaker.PieceWidthWithoutJoint, Screen.width - _PuzzleMaker.PieceWidthWithoutJoint),
                                 Random.Range(_PuzzleMaker.PieceHeightWithoutJoint, Screen.height - _PuzzleMaker.PieceHeightWithoutJoint),
-                                0) );
+                                0));
                 CalcPosition.z = transform.position.z - 0.4f;
 
                 Temp.transform.position = CalcPosition;
@@ -176,10 +185,10 @@ public class JPPuzzleController : MonoBehaviour {
             }
         }
 
-#endregion
+        #endregion
 
 
-#region "Camera Resizing And Placement"
+        #region "Camera Resizing And Placement"
 
         //Resize camera to display whole puzzle in camera view
         float widthToBeSeen = PiecesInRow * PieceWidthInWorld;
@@ -192,13 +201,13 @@ public class JPPuzzleController : MonoBehaviour {
         //float CalcCameraY = ;
 
         //parentCamTransform.position = new Vector3(CalcCameraX, CalcCameraY, _pieceInstances[1][0].transform.position.z - 3);
-        parentCamTransform.position = new Vector3(0,0,transform.position.z - 10 ) ;
+        parentCamTransform.position = new Vector3(0, 0, transform.position.z - 10);
 
-#endregion
+        #endregion
 
-	}
+    }
 
-    void Update ()
+    void Update()
     {
         if (IsHoldingPiece())
         {
@@ -251,7 +260,7 @@ public class JPPuzzleController : MonoBehaviour {
                 UnholdPiece();
         }
 
-	}
+    }
 
     void OnGUI()
     {
@@ -303,7 +312,7 @@ public class JPPuzzleController : MonoBehaviour {
         }
 
         return -1;
-        
+
     }
 
 }

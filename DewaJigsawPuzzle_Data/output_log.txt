@@ -1,7 +1,7 @@
 Initialize engine version: 5.2.1f1 (44735ea161b3)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [igdumdim32.dll 10.18.10.3958]
+    Version:  Direct3D 9.0c [igdumdim64.dll 10.18.10.3958]
     Renderer: Intel(R) HD Graphics 4000
     Vendor:   Intel
     VRAM:     912 MB (via DXGI)
@@ -16,68 +16,33 @@ Loading C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Manag
 Platform assembly: C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.424 seconds
+- Completed reload, in  0.136 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1664 -> priority: 1 
-HandleD3DDeviceLost
-  HandleD3DDeviceLost: still lost
-Skipped frame because GfxDevice is in invalid state (device lost)
- 
-(Filename:  Line: 1405)
+  Thread -> id: 2a78 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.712112 ms
 
-HandleD3DDeviceLost
-  HandleD3DDeviceLost: needs reset, doing it
-FullResetD3DDevice
-ResetD3DDevice
-dev->Reset
-D3Dwindow device not lost anymore
-HandleD3DDeviceLost
-  HandleD3DDeviceLost: still lost
-Skipped frame because GfxDevice is in invalid state (device lost)
- 
-(Filename:  Line: 1405)
-
-HandleD3DDeviceLost
-  HandleD3DDeviceLost: needs reset, doing it
-FullResetD3DDevice
-ResetD3DDevice
-dev->Reset
-D3Dwindow device not lost anymore
-+971551234567
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 199.
+Total: 0.360398 ms (FindLiveObjects: 0.026842 ms CreateObjectMapping: 0.030395 ms MarkObjects: 0.253423 ms  DeleteObjects: 0.011052 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.976588 ms
+UnloadTime: 0.461846 ms
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 197.
-Total: 0.408556 ms (FindLiveObjects: 0.026447 ms CreateObjectMapping: 0.041053 ms MarkObjects: 0.328029 ms  DeleteObjects: 0.011052 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 208.
+Total: 0.292897 ms (FindLiveObjects: 0.024868 ms CreateObjectMapping: 0.017763 ms MarkObjects: 0.228949 ms  DeleteObjects: 0.020526 ms)
 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.629611 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 197.
-Total: 0.347371 ms (FindLiveObjects: 0.029605 ms CreateObjectMapping: 0.025658 ms MarkObjects: 0.278292 ms  DeleteObjects: 0.012236 ms)
-
-+971551234567
+IsolatedStorageException: Could not find a part of the path "C:\Users\Naiyarah\Documents\Dewa\Dewa Puzzle\DewaJigsawPuzzle_Data\Puzzle Maker\PM Free Images\dewa\7.jpg".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllBytes (System.String path) [0x00000] in <filename unknown>:0 
+  at JPPuzzleController.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.621321 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 197.
-Total: 0.451583 ms (FindLiveObjects: 0.034342 ms CreateObjectMapping: 0.031973 ms MarkObjects: 0.373029 ms  DeleteObjects: 0.010657 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.575531 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 197.
-Total: 0.352108 ms (FindLiveObjects: 0.031579 ms CreateObjectMapping: 0.024473 ms MarkObjects: 0.283818 ms  DeleteObjects: 0.011052 ms)
+(Filename:  Line: -1)
 

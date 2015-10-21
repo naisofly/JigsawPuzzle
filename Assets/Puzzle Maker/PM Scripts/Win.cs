@@ -29,11 +29,51 @@ public class Win : MonoBehaviour
         GUILayout.EndHorizontal();
         GUILayout.EndArea();
     }
-
+	void Start()
+	{
+		readData();
+	}
     void Update()
-    {   
+    {
+        
         //load form screen on any mouse click
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+        {
+            //addData();
             Application.LoadLevel(0);
+        }
+    }
+
+    private void readData()
+    {
+        Debug.Log("read winner data"); Debug.Log(getPath());
+        string[] records = File.ReadAllLines(getPath() + "/PlayerData.csv"); //read all players
+        
+        string winner = records[records.Length - 1]; //read winner (last record)
+
+        string[] details = winner.Split(','); //winner details
+
+        string enteredName = details[0];
+        string enteredPhone = details[1];
+        string enteredEmail = details[2];
+
+        Debug.Log("write winner data");
+        addData(enteredName, enteredPhone, enteredEmail);
+
+    }
+
+    public void addData(string enteredName, string enteredPhone, string enteredEmail)
+    {
+        // Following line adds data to CSV file
+        File.AppendAllText(getPath() + "/GameApp_DataWinners.csv", "\n" + enteredName
+            + "," + enteredPhone + "," + enteredEmail);
+
+        Debug.Log("Winner Data written");
+    }
+
+    // Get path for given CSV file
+    private static string getPath()
+    {
+        return Application.dataPath;
     }
 }

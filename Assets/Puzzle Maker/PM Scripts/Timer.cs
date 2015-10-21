@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
     {
         timer.Stop();
         time = timer.Elapsed;
-        UnityEngine.Debug.Log(timeOut);
+        //UnityEngine.Debug.Log(timeOut);
     }
 
     void OnGUI()
