@@ -21,11 +21,12 @@ public class Difficulty : MonoBehaviour
 
         if(GUI.Button(new Rect(10, 50, 200, 100), "EASY"))
         {
-            Application.LoadLevel(2); //load Easy scene
+            Application.LoadLevel("Easy"); //load Easy scene
         }
+
         if( GUI.Button(new Rect(10, 200, 200, 100), "HARD"))
         {
-            Application.LoadLevel(3); //load Hard scene
+            Application.LoadLevel("Hard"); //load Hard scene
         }
 
         GUILayout.EndVertical();
