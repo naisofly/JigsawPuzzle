@@ -82,6 +82,7 @@
     <Compile Include="Assets\Puzzle Maker\PM Scripts\MPPuzzleController.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\PPPiecePositionDetection.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\PPPuzzleController.cs" />
+    <Compile Include="Assets\Puzzle Maker\PM Scripts\Picture.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\PuzzlePieceMaker.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\RegistrationForm.cs" />
     <Compile Include="Assets\Puzzle Maker\PM Scripts\SJointInfo.cs" />
