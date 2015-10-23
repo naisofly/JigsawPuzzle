@@ -11,8 +11,37 @@ public class RegistrationForm : MonoBehaviour
 
     public Texture logo, mascot_noor, mascot_hayat;
 
+    private float _oldWidth;
+    private float _oldHeight;
+    private float _fontSize = 20;
+    public float EffectiveFontSizePercent = 0.1f; // value between 0 and 1
+
+    //void Update()
+    //{
+    //    //RESPONSIVE GUI FONT SIZE
+    //    if (_oldWidth != Screen.width || _oldHeight != Screen.height)
+    //    {
+    //        _oldWidth = Screen.width;
+    //        _oldHeight = Screen.height;
+    //        _fontSize = Mathf.Min(Screen.width, Screen.height) * EffectiveFontSizePercent;
+    //        GetComponent<GUIText>().fontSize = (int)_fontSize;
+    //    }
+    //}
+
     void OnGUI()
     {
+
+        //if (_oldWidth != Screen.width || _oldHeight != Screen.height)
+        //{
+        //    _oldWidth = Screen.width;
+        //    _oldHeight = Screen.height;
+        //    _fontSize = Mathf.Min(Screen.width, Screen.height) * EffectiveFontSizePercent;
+        //    GUI.skin.label.fontSize = (int)_fontSize;
+        //}
+
+        //GUI.skin.label.font = GUI.skin.button.font = GUI.skin.box.font = font;
+        GUI.skin.label.fontSize = GUI.skin.box.fontSize = GUI.skin.button.fontSize = GUI.skin.textField.fontSize = (int)_fontSize;
+
         GUI.contentColor = Color.black;
         if (!logo)
         {
@@ -20,8 +49,9 @@ public class RegistrationForm : MonoBehaviour
             return;
         }
 
-        GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
-        //GUI.DrawTexture(new Rect(500, 100, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+        //logo
+        GUI.DrawTexture(new Rect(Screen.width / 2 - 250, Screen.height / 2 - 250, 585, 150), logo, ScaleMode.StretchToFill, true, 10.0F);
+        //GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
 
         // Wrap everything in the designated GUI Area
         GUILayout.BeginArea(new Rect(Screen.width / 2 - 500, 200, 1000, 800));
@@ -62,7 +92,7 @@ public class RegistrationForm : MonoBehaviour
     public void addData()
     {
         // Following line adds data to CSV file
-        File.AppendAllText(getPath() + "/PlayerData.csv", "\n" + enteredName 
+        File.AppendAllText("DewaJigsawPuzzle_Data/PlayerData.csv", "\n" + enteredName 
             + "," + enteredPhone + "," + enteredEmail);
         //UnityEditor.AssetDatabase.Refresh();
         //readData(); // send player data to next game scene then win/lose scene

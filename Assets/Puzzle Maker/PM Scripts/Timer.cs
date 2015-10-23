@@ -38,6 +38,6 @@ public class Timer : MonoBehaviour
     void OnGUI()
     {
         // GUI.Label(new Rect(350, 100, 100, 20), ("ELAPSED \t" + time.Minutes.ToString() + ":" + time.Seconds.ToString()));
-        GUI.Button(new Rect(650, 0, 100, 30), ("TIME \t" + remaining.Minutes.ToString() + ":" + remaining.Seconds.ToString() +" "));
+        GUI.Button(new Rect(Screen.width -150, 0, 150, 80), ("TIME \t" + remaining.Minutes.ToString() + ":" + remaining.Seconds.ToString() +" "));
     }
 }

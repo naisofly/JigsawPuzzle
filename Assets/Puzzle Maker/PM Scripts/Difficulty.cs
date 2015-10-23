@@ -12,9 +12,10 @@ public class Difficulty : MonoBehaviour
         GUI.contentColor = Color.black;
 
         //logo
-        GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+        GUI.DrawTexture(new Rect(Screen.width / 2 - 250, Screen.height / 2 - 250, 585, 150), logo, ScaleMode.StretchToFill, true, 10.0F);
+        //GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
 
-       // GUILayout.BeginArea(new Rect(Screen.width / 2 - 175, 175, 400, 800));
+        // GUILayout.BeginArea(new Rect(Screen.width / 2 - 175, 175, 400, 800));
 
         GUILayout.BeginArea(new Rect(Screen.width / 2 - 500, 200, 1000, 800));
 
@@ -26,12 +27,12 @@ public class Difficulty : MonoBehaviour
         GUILayout.BeginVertical();
         GUI.Label(new Rect(350, 20, 300, 100),"Pick a Difficulty Level");
 
-        if (GUI.Button(new Rect(350, Screen.height/2 - 300, 300, 100), "KIDS"))
+        if (GUI.Button(new Rect(350, Screen.height/2 - 250, 300, 100), "KIDS"))
         {
             Application.LoadLevel(2); //load Easy scene
         }
 
-        if( GUI.Button(new Rect(350, Screen.height / 2 -100, 300, 100), "ADULTS"))
+        if( GUI.Button(new Rect(350, Screen.height / 2 - 50, 300, 100), "ADULTS"))
         {
             Application.LoadLevel(3); //load Hard scene
         }

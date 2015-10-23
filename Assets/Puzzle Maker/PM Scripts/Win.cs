@@ -16,7 +16,8 @@ public class Win : MonoBehaviour
             return;
         }
         //logo
-        GUI.DrawTexture(new Rect(Screen.width/2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+        GUI.DrawTexture(new Rect(Screen.width / 2 - 250, Screen.height / 2 - 250, 585, 150), logo, ScaleMode.StretchToFill, true, 10.0F);
+        //GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
 
         GUILayout.BeginArea(new Rect(Screen.width/2 - 350, 150, 900, 800));
         GUILayout.BeginHorizontal();
@@ -47,7 +48,8 @@ public class Win : MonoBehaviour
     private void readData()
     {
         Debug.Log("read winner data"); Debug.Log(getPath());
-        string[] records = File.ReadAllLines(getPath() + "/PlayerData.csv"); //read all players
+        //string[] records = File.ReadAllLines(getPath() + "/PlayerData.csv"); //read all players
+		string[] records = File.ReadAllLines("DewaJigsawPuzzle_Data/PlayerData.csv"); //read all players
         
         string winner = records[records.Length - 1]; //read winner (last record)
 
@@ -65,8 +67,8 @@ public class Win : MonoBehaviour
     public void addData(string enteredName, string enteredPhone, string enteredEmail)
     {
         // Following line adds data to CSV file
-        File.AppendAllText(getPath() + "/GameApp_DataWinners.csv", "\n" + enteredName
-            + "," + enteredPhone + "," + enteredEmail);
+        //File.AppendAllText(getPath() + "/GameApp_DataWinners.csv", enteredName + "\n" );
+		File.AppendAllText("DewaJigsawPuzzle_Data/GameApp_DataWinners.csv", enteredName + "\n" );
 
         Debug.Log("Winner Data written");
     }

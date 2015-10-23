@@ -70,9 +70,10 @@ public class JPPuzzleController : MonoBehaviour
         if (!UseFilePath)
         {
             //random image selection
-            PuzzleImage = new Texture2D(1, 1);
-            PuzzleImage.LoadImage(File.ReadAllBytes(getPath() + "/Puzzle Maker/PM Free Images/dewa/" + Random.Range(1, 11) + ".jpg"));
-
+            //PuzzleImage = new Texture2D(1, 1);
+            //PuzzleImage.LoadImage(File.ReadAllBytes(getPath() + "/Puzzle Maker/PM Free Images/dewa/" + "1" + ".jpg"));
+            //Random.Range(0, 3) //KIDS PUZZLE IMAGES
+            //Random.Range(3,6)  //ADULTS PUZZLE IMAGES
             _PuzzleMaker = new PuzzlePieceMaker(PuzzleImage, JointMaskImage, PiecesInRow, PiecesInCol);
 
             //Enable below code and provide a file path to save data created by _puzzlemaker class using provided image
@@ -264,7 +265,7 @@ public class JPPuzzleController : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(0, 0, 100, 30), "Reset"))
+        if (GUI.Button(new Rect(0, 0, 150, 80), "Reset"))
             Reset();
     }
 

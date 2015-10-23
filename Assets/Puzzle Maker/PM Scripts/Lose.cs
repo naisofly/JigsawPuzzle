@@ -16,7 +16,9 @@ public class Lose : MonoBehaviour
             return;
         }
         //logo
-        GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+        GUI.DrawTexture(new Rect(Screen.width / 2 - 250, Screen.height / 2 - 250, 585, 150), logo, ScaleMode.StretchToFill, true, 10.0F);
+        //GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+
 
         GUILayout.BeginArea(new Rect(Screen.width / 2 - 350, 150, 900, 800));
         GUILayout.BeginHorizontal();
