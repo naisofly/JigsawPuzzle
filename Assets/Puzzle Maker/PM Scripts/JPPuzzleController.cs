@@ -70,8 +70,9 @@ public class JPPuzzleController : MonoBehaviour
         if (!UseFilePath)
         {
             //random image selection
-            //PuzzleImage = new Texture2D(1, 1);
-            //PuzzleImage.LoadImage(File.ReadAllBytes(getPath() + "/Puzzle Maker/PM Free Images/dewa/" + "1" + ".jpg"));
+            PuzzleImage = new Texture2D(1, 1);
+            PuzzleImage.LoadImage(File.ReadAllBytes(getPath() + "/dewa/" + Random.Range(0, 6) + ".jpg"));
+            //Debug.Log(getPath()+ "/Puzzle Maker/PM Free Images/dewa/" + "1" + ".jpg");
             //Random.Range(0, 3) //KIDS PUZZLE IMAGES
             //Random.Range(3,6)  //ADULTS PUZZLE IMAGES
             _PuzzleMaker = new PuzzlePieceMaker(PuzzleImage, JointMaskImage, PiecesInRow, PiecesInCol);

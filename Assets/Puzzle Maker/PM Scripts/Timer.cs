@@ -38,6 +38,11 @@ public class Timer : MonoBehaviour
     void OnGUI()
     {
         // GUI.Label(new Rect(350, 100, 100, 20), ("ELAPSED \t" + time.Minutes.ToString() + ":" + time.Seconds.ToString()));
-        GUI.Button(new Rect(Screen.width -150, 0, 150, 80), ("TIME \t" + remaining.Minutes.ToString() + ":" + remaining.Seconds.ToString() +" "));
+        GUI.Button(new Rect(Screen.width - 200, 0, 200, 80), ("TIME \t" + remaining.Minutes.ToString() + ":" + remaining.Seconds.ToString() + " "));
+        //GUI.Button(new Rect(0, 0, Screen.width, 80), (Application.dataPath));
+        //GUI.Button(new Rect(0, 100, Screen.width, 80), (Application.dataPath+ "/dewa/" + "0" + ".jpg"));
+
+        UnityEngine.Debug.Log("DATAPATH: " + Application.dataPath);
+        UnityEngine.Debug.Log("filepath: " + Application.streamingAssetsPath);
     }
 }

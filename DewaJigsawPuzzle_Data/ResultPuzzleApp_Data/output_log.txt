@@ -1,0 +1,56 @@
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.053 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Naiyarah\Documents\Dewa\App\PuzzleResult\DewaJigsawPuzzle_Data\ResultPuzzleApp_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 38c -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.191327 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 221.
+Total: 0.220265 ms (FindLiveObjects: 0.021315 ms CreateObjectMapping: 0.013026 ms MarkObjects: 0.170922 ms  DeleteObjects: 0.014210 ms)
+
+END
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+END
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+END
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.382503 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 225.
+Total: 17.388718 ms (FindLiveObjects: 0.020921 ms CreateObjectMapping: 0.015000 ms MarkObjects: 17.329903 ms  DeleteObjects: 0.021710 ms)
+
+28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+

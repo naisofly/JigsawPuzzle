@@ -9,11 +9,11 @@ public class RegistrationForm : MonoBehaviour
     public string enteredPhone = "";
     public string enteredEmail = "";
 
-    public Texture logo, mascot_noor, mascot_hayat;
+    public Texture dewaLogo, wedLogo, mascot_noor, mascot_hayat;
 
     private float _oldWidth;
     private float _oldHeight;
-    private float _fontSize = 20;
+    private float _fontSize = 30;
     public float EffectiveFontSizePercent = 0.1f; // value between 0 and 1
 
     //void Update()
@@ -42,38 +42,38 @@ public class RegistrationForm : MonoBehaviour
         //GUI.skin.label.font = GUI.skin.button.font = GUI.skin.box.font = font;
         GUI.skin.label.fontSize = GUI.skin.box.fontSize = GUI.skin.button.fontSize = GUI.skin.textField.fontSize = (int)_fontSize;
 
-        GUI.contentColor = Color.black;
-        if (!logo)
+        GUI.contentColor = Color.white;
+        if (!dewaLogo)
         {
             Debug.LogError("Assign a Texture in the inspector.");
             return;
         }
 
-        //logo
-        GUI.DrawTexture(new Rect(Screen.width / 2 - 250, Screen.height / 2 - 250, 585, 150), logo, ScaleMode.StretchToFill, true, 10.0F);
-        //GUI.DrawTexture(new Rect(Screen.width / 2 - 175, 50, 400, 100), logo, ScaleMode.StretchToFill, true, 10.0F);
+        //logos
+        GUI.DrawTexture(new Rect(Screen.width / 2 - 320, Screen.height - 350, 644, 300), wedLogo, ScaleMode.StretchToFill, true, 10.0F);
+        //GUI.DrawTexture(new Rect(Screen.width - 800, 20, 780, 200), dewaLogo, ScaleMode.StretchToFill, true, 10.0F);
 
         // Wrap everything in the designated GUI Area
-        GUILayout.BeginArea(new Rect(Screen.width / 2 - 500, 200, 1000, 800));
+        GUILayout.BeginArea(new Rect(Screen.width / 2 - 800, Screen.height / 2 - 600, 1600, 1080));
 
         GUILayout.BeginHorizontal();
 
-        //noor mascot
-        GUI.DrawTexture(new Rect(0, 0, 270, 380), mascot_noor, ScaleMode.StretchToFill, true, 10.0F);
-
+        //NOOR
+        GUI.DrawTexture(new Rect(0, Screen.height / 2 - 200, 450, 600), mascot_noor, ScaleMode.StretchToFill, true, 10.0F);
 
         // Begin the singular Vertical Group
         GUILayout.BeginVertical();
         // GUILayout.Label("DEWA PUZZLE");
-        GUILayout.Space(20);
-        GUI.Label(new Rect(350, 0, 300, 30),"Enter Your Name");
-        enteredName = GUI.TextField(new Rect(350, 40, 300, 30), enteredName, 25);
-        GUI.Label(new Rect(350, 80, 300, 30), "Enter Your Phone Number");
-        enteredPhone = GUI.TextField(new Rect(350, 120, 300, 30), enteredPhone, 25);
-        GUI.Label(new Rect(350, 160, 300, 30), "Enter Your Email");
-        enteredEmail = GUI.TextField(new Rect(350, 200, 300, 30), enteredEmail, 25);
-       // GUILayout.Space(20);
-        if (GUI.Button(new Rect(350, 300, 300, 50), "PLAY"))
+        GUI.Label(new Rect(Screen.width / 3 - 50, Screen.height / 3 - 100, 400, 50), "SOLVE THE PUZZLE!");
+
+        GUI.Label(new Rect(Screen.width / 3 - 50, Screen.height / 3, 400, 50), "Name");
+        enteredName = GUI.TextField(new Rect(Screen.width / 3 - 50, Screen.height / 3 + 50, 400, 50), enteredName, 25);
+        GUI.Label(new Rect(Screen.width / 3 - 50, Screen.height / 3 + 100, 400, 50), "Phone Number");
+        enteredPhone = GUI.TextField(new Rect(Screen.width / 3 - 50, Screen.height / 3 + 150, 400, 50), enteredPhone, 25);
+        //GUI.Label(new Rect(Screen.width / 3-50, Screen.height / 3 + 200, 400, 50), "Email");
+        //enteredEmail = GUI.TextField(new Rect(Screen.width / 3-50, Screen.height / 3 + 250, 400, 50), enteredEmail, 25);
+        // GUILayout.Space(20);
+        if (GUI.Button(new Rect(Screen.width / 3 - 50, Screen.height / 3 + 250, 400, 100), "PLAY"))
         {
             addData();
             Application.LoadLevel(1);
@@ -81,8 +81,8 @@ public class RegistrationForm : MonoBehaviour
         // End the Groups and Area
         GUILayout.EndVertical();
 
-        //hayat mascot
-        GUI.DrawTexture(new Rect(730, 0, 270, 380), mascot_hayat, ScaleMode.StretchToFill, true, 10.0F);
+        //HAYAT
+        GUI.DrawTexture(new Rect(Screen.width / 2 + 200, Screen.height / 2 - 200, 506, 600), mascot_hayat, ScaleMode.StretchToFill, true, 10.0F);
 
         GUILayout.EndHorizontal();
 
@@ -92,25 +92,25 @@ public class RegistrationForm : MonoBehaviour
     public void addData()
     {
         // Following line adds data to CSV file
-        File.AppendAllText("DewaJigsawPuzzle_Data/PlayerData.csv", "\n" + enteredName 
-            + "," + enteredPhone + "," + enteredEmail);
+        File.AppendAllText("DewaJigsawPuzzle_Data/PlayerData.csv", "\n" + enteredName
+            + "," + enteredPhone + "," + "...@...");
         //UnityEditor.AssetDatabase.Refresh();
         //readData(); // send player data to next game scene then win/lose scene
-       // Debug.Log(enteredPhone);
+        // Debug.Log(enteredPhone);
     }
 
     // Get path for given CSV file
     private static string getPath()
     {
-    //#if UNITY_EDITOR
+        //#if UNITY_EDITOR
         return Application.dataPath;
-    //#elif UNITY_ANDROID
-    //return Application.persistentDataPath;// +fileName;
-    //#elif UNITY_IPHONE
-    //return GetiPhoneDocumentsPath();// +"/"+fileName;
-    //#else
-    //return Application.dataPath;// +"/"+ fileName;
-    //#endif
+        //#elif UNITY_ANDROID
+        //return Application.persistentDataPath;// +fileName;
+        //#elif UNITY_IPHONE
+        //return GetiPhoneDocumentsPath();// +"/"+fileName;
+        //#else
+        //return Application.dataPath;// +"/"+ fileName;
+        //#endif
     }
 
 }
